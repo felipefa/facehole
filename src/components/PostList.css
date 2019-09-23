@@ -16,7 +16,7 @@
   height: 1px;
   border: 0;
   border-top: 1px solid #ddd;
-  margin: 1em 0;
+  margin: 2em 1em;
   padding: 0;
 }
 
@@ -75,7 +75,7 @@
   background: #eee;
   border-radius: 1.5em;
   flex-grow: 1;
-  margin: 1em;
+  margin: 0.5em;
   padding: 1em;
   line-height: 1.6;
 }

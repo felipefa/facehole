@@ -63,6 +63,19 @@ class PostList extends Component {
                 {this.state.posts[0].comments[0].content}
               </div>
             </div>
+            <div className="comment">
+              <img
+                className="commentAvatar userAvatar"
+                src={this.state.posts[0].comments[0].author.avatar}
+                alt="User avatar"
+              />
+              <div className="commentContent">
+                <span className="commentAuthor">
+                  {this.state.posts[0].comments[0].author.name}
+                </span>
+                {this.state.posts[0].comments[0].content}
+              </div>
+            </div>
           </div>
         </div>
       </div>
