@@ -7,12 +7,8 @@ const Header = ({ user }) => {
     <div className="header">
       <h1 className="logo">facehole</h1>
       <div className="user">
-        <a className="userName">User</a>
-        <img
-          className="userAvatar"
-          src="https://via.placeholder.com/32"
-          alt="User avatar"
-        />
+        <a className="userName">{user.name}</a>
+        <img className="userAvatar" src={user.avatar} alt="User avatar" />
       </div>
     </div>
   );

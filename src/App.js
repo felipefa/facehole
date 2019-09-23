@@ -6,9 +6,14 @@ import PostList from './components/PostList';
 import './App.css';
 
 const App = () => {
+  const user = {
+    name: 'Felipe Araujo',
+    avatar: 'https://avatars0.githubusercontent.com/u/12715851'
+  };
+
   return (
     <>
-      <Header user="" />
+      <Header user={user} />
       <PostList />
     </>
   );
