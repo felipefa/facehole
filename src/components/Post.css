@@ -16,7 +16,7 @@
   padding: 0;
 }
 
-.card img.userAvatar {
+.card img {
   border-radius: 50%;
   height: 4em;
   width: 4em;
@@ -49,29 +49,4 @@
 
 .card .content {
   padding: 0 1em 1em;
-}
-
-.card .comment {
-  display: flex;
-}
-
-.card img.commentAvatar {
-  height: 2.5em;
-  width: 2.5em;
-  margin-right: 0.5em;
-}
-
-.card .commentAuthor {
-  flex-grow: 1;
-  font-weight: bold;
-  margin-right: 0.5em;
-}
-
-.card .commentContent {
-  background: #eee;
-  border-radius: 1.5em;
-  flex-grow: 1;
-  margin: 0.5em;
-  padding: 1em;
-  line-height: 1.6;
 }

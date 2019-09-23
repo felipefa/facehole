@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Comment from './Comment';
+
 import './Post.css';
 
 const Post = ({ post }) => {
@@ -20,19 +22,7 @@ const Post = ({ post }) => {
         <p className="content">{post.content}</p>
         <hr />
         {post.comments.map(comment => {
-          return (
-            <div className="comment" key={comment.id}>
-              <img
-                className="commentAvatar userAvatar"
-                src={comment.author.avatar}
-                alt="User avatar"
-              />
-              <div className="commentContent">
-                <span className="commentAuthor">{comment.author.name}</span>
-                {comment.content}
-              </div>
-            </div>
-          );
+          return <Comment key={comment.id} comment={comment} />;
         })}
       </div>
     </div>
