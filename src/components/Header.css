@@ -1,4 +1,4 @@
-div.header {
+.header {
   display: flex;
   align-content: center;
   align-items: center;
@@ -10,7 +10,7 @@ div.header {
   min-height: 5em;
 }
 
-h1.logo {
+.header h1.logo {
   flex-grow: 1;
   font-family: 'Facebolf', sans-serif;
   font-size: 2.2em;
@@ -18,19 +18,18 @@ h1.logo {
   word-spacing: 0.08em;
 }
 
-div.user {
+.header div.user {
   flex: none;
   max-width: 50%;
 }
 
-a.userName {
+.header a.userName {
   cursor: pointer;
   font-weight: bold;
   margin: 1em;
 }
 
-img.userAvatar {
-  border: 1px solid var(--primary-color-dark);
+.header img.userAvatar {
   border-radius: 50%;
   height: 2em;
   vertical-align: middle;
