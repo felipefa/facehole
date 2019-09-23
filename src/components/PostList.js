@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Post from './Post';
+
 import './PostList.css';
 
 class PostList extends Component {
@@ -8,26 +10,64 @@ class PostList extends Component {
       {
         id: 1,
         author: {
-          name: 'Julio Alcantara',
-          avatar: 'https://via.placeholder.com/64'
+          name: 'Felipe Araujo',
+          avatar: 'https://avatars0.githubusercontent.com/u/12715851'
         },
-        date: '04 Jun 2019',
-        content: 'Pessoal, alguém sabe se a Rocketseat está contratando?',
+        date: '23 Set 2019',
+        content: 'Pessoal, alguém já viu os novos vídeos da Rocketseat?',
         comments: [
           {
             id: 1,
             author: {
-              name: 'Diego Fernandes',
-              avatar: 'https://via.placeholder.com/64'
+              name: 'Frederiko Cesar',
+              avatar: 'https://avatars3.githubusercontent.com/u/35873365'
             },
-            content:
-              'Conteúdo do comentário, Conteúdo do comentário, Conteúdo do comentário, Conteúdo do comentário, Conteúdo do comentário, Conteúdo do comentário, Conteúdo do comentário, Conteúdo do comentário, Conteúdo do comentário, Conteúdo do comentário'
+            content: 'Já vi todos!'
+          },
+          {
+            id: 2,
+            author: {
+              name: 'Autímio Brito Filho',
+              avatar: 'https://avatars0.githubusercontent.com/u/19158164'
+            },
+            content: 'Só vi os primeiros... :('
           }
         ]
       },
       {
-        id: 2
-        // Restante dos dados de um novo post
+        id: 2,
+        author: {
+          name: 'Frederiko Cesar',
+          avatar: 'https://avatars3.githubusercontent.com/u/35873365'
+        },
+        date: '17 Set 2019',
+        content: 'O que estão achando do bootcamp da Rocketseat?',
+        comments: [
+          {
+            id: 1,
+            author: {
+              name: 'Felipe Araujo',
+              avatar: 'https://avatars0.githubusercontent.com/u/12715851'
+            },
+            content: 'É muito bom, estou gostando bastante!'
+          },
+          {
+            id: 2,
+            author: {
+              name: 'Autímio Brito Filho',
+              avatar: 'https://avatars0.githubusercontent.com/u/19158164'
+            },
+            content: 'Eles tem as melhores aulas que eu já vi!'
+          },
+          {
+            id: 3,
+            author: {
+              name: 'Frederiko Cesar',
+              avatar: 'https://avatars3.githubusercontent.com/u/35873365'
+            },
+            content: 'Realmente, é bom mesmo...'
+          }
+        ]
       }
     ]
   };
@@ -35,49 +75,9 @@ class PostList extends Component {
   render() {
     return (
       <div className="container">
-        <div className="card">
-          <div className="cardHeader">
-            <img
-              className="userAvatar"
-              src={this.state.posts[0].author.avatar}
-              alt="User avatar"
-            />
-            <div className="postInfo">
-              <p className="userName">{this.state.posts[0].author.name}</p>
-              <p className="date">{this.state.posts[0].date}</p>
-            </div>
-          </div>
-          <div className="cardBody">
-            <p className="content">{this.state.posts[0].content}</p>
-            <hr />
-            <div className="comment">
-              <img
-                className="commentAvatar userAvatar"
-                src={this.state.posts[0].comments[0].author.avatar}
-                alt="User avatar"
-              />
-              <div className="commentContent">
-                <span className="commentAuthor">
-                  {this.state.posts[0].comments[0].author.name}
-                </span>
-                {this.state.posts[0].comments[0].content}
-              </div>
-            </div>
-            <div className="comment">
-              <img
-                className="commentAvatar userAvatar"
-                src={this.state.posts[0].comments[0].author.avatar}
-                alt="User avatar"
-              />
-              <div className="commentContent">
-                <span className="commentAuthor">
-                  {this.state.posts[0].comments[0].author.name}
-                </span>
-                {this.state.posts[0].comments[0].content}
-              </div>
-            </div>
-          </div>
-        </div>
+        {this.state.posts.map(post => {
+          return <Post key={post.id} post={post} />;
+        })}
       </div>
     );
   }
