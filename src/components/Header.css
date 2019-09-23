@@ -1,0 +1,38 @@
+div.header {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: var(--secondary-color);
+  color: var(--primary-color-dark);
+  padding: 0 32px;
+  min-height: 5em;
+}
+
+h1.logo {
+  flex-grow: 1;
+  font-family: 'Facebolf', sans-serif;
+  font-size: 2.2em;
+  line-height: 1;
+  word-spacing: 0.08em;
+}
+
+div.user {
+  flex: none;
+  max-width: 50%;
+}
+
+a.userName {
+  cursor: pointer;
+  font-weight: bold;
+  margin: 1em;
+}
+
+img.userAvatar {
+  border: 1px solid var(--primary-color-dark);
+  border-radius: 50%;
+  height: 2em;
+  vertical-align: middle;
+  display: inline-block;
+}

@@ -1,0 +1,19 @@
+:root {
+  --primary-color: #434345;
+  --primary-color-dark: #343434;
+  --secondary-color: #fff;
+}
+
+@font-face {
+  font-family: 'Facebolf';
+  font-style: bold;
+  font-weight: 800;
+  src: local('Facebolf'), url('/fonts/facebolf.otf') format('opentype');
+}
+
+body {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
